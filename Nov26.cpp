@@ -28,16 +28,16 @@ vector<int>Indegree(n,0);//vector to maintain the count of indegree of each node
     int a=edges[i][0];
     int b=edges[i][1];
     Indegree[b]++;
-   }   
+   } 
+
    int count=0;
    int champion=-1;
-for(int i=0;i<Indegree.size();i++){
+   for(int i=0;i<Indegree.size();i++){
     if(Indegree[i]==0){
         count++;
         champion=i;
     }
 }
-
 return (count >1 ? -1: champion);   
     }
 
